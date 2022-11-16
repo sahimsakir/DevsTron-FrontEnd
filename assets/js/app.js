@@ -1,12 +1,12 @@
-(function($) {
+(function ($) {
     'use strict';
-    $(document).ready(function() {
+    $(document).ready(function () {
         // lightcase activation//
         $('a[data-rel^=lightcase]').lightcase();
 
         //menu top fixed start for mobile menu & desktop menu
         var fixed_top = $(".bg-white");
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             if ($(this).scrollTop() > 10) {
                 fixed_top.addClass("menu-fixed animated fadeInDown");
                 fixed_top.removeClass("slideInUp");
@@ -19,7 +19,7 @@
         });
 
         // Click event to scroll bar start
-        $(window).on("scroll", function() {
+        $(window).on("scroll", function () {
             if ($(this).scrollTop() > 200) {
                 $('.scrollToTop').fadeIn();
             } else {
@@ -28,7 +28,7 @@
         });
 
         //Click event to scroll to top start
-        $('.scrollToTop').on("click", function() {
+        $('.scrollToTop').on("click", function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 700);
@@ -36,7 +36,7 @@
         });
 
         // search & cart option
-        $(document).on('click', '.search-cart .search a, .search-close', function() {
+        $(document).on('click', '.search-cart .search a, .search-close', function () {
             $(".search-area").toggleClass("open");
         });
 
@@ -49,13 +49,13 @@
 
 
         // mobile menu responsive
-        $(document).on('click', '.header-bar', function() {
+        $(document).on('click', '.header-bar', function () {
             $(".header-bar").toggleClass("close");
             $(".menu").toggleClass("open");
         });
 
         //mobile drodown menu display
-        $('.mobile-menu-area .m-menu li a').on('click', function(e) {
+        $('.mobile-menu-area .m-menu li a').on('click', function (e) {
             var element = $(this).parent('li');
             if (element.hasClass('open')) {
                 element.removeClass('open');
@@ -73,7 +73,7 @@
 
 
         // drop down menu width overflow problem fix
-        $('ul').parent().on('hover', function() {
+        $('ul').parent().on('hover', function () {
             var menu = $(this).find("ul");
             var menupos = $(menu).offset();
             if (menupos.left + menu.width() > $(window).width()) {
@@ -83,7 +83,7 @@
         });
 
         //Click event to scroll to top
-        $('.scrollToTop').on("click", function() {
+        $('.scrollToTop').on("click", function () {
             $('html, body').animate({
                 scrollTop: 0
             }, 1000);
@@ -170,7 +170,7 @@
 
 
         //product slider activetion start
-        $(window).on("scroll", function() {
+        $(window).on("scroll", function () {
             var galleryThumbs = new Swiper('.gallery-thumbs', {
                 slidesPerView: 5,
                 freeMode: true,
@@ -222,15 +222,15 @@
 
 
         //image loaded hear//
-        $('.container').imagesLoaded(function() {
-            $('.portfolio-menu').on('click', '.button', function() {
+        $('.container').imagesLoaded(function () {
+            $('.portfolio-menu').on('click', '.button', function () {
                 var filterValue = $(this).attr('data-filter');
                 $grid.isotope({ filter: filterValue });
             });
             // change is-checked class on buttons
-            $('.button-group').each(function(i, buttonGroup) {
+            $('.button-group').each(function (i, buttonGroup) {
                 var $buttonGroup = $(buttonGroup);
-                $buttonGroup.on('click', '.button', function() {
+                $buttonGroup.on('click', '.button', function () {
                     $buttonGroup.find('.is-checked').removeClass('is-checked');
                     $(this).addClass('is-checked');
                 });
@@ -252,11 +252,11 @@
         });
 
         // multy count down - start
-        $('.countdown-list').each(function() {
-            $('[data-countdown]').each(function() {
+        $('.countdown-list').each(function () {
+            $('[data-countdown]').each(function () {
                 var $this = $(this),
                     finalDate = $(this).data('countdown');
-                $this.countdown(finalDate, function(event) {
+                $this.countdown(finalDate, function (event) {
                     var $this = $(this).html(event.strftime('' +
                         '<li class="timer-item days"><strong>%D</strong><small>days</small></li>' +
                         '<li class="timer-item hours"><strong>%H</strong><small>hours</small></li>' +
@@ -267,8 +267,8 @@
         });
 
         // product view mode change js
-        $(function() {
-            $('.product-view-mode').on('click', 'a', function(e) {
+        $(function () {
+            $('.product-view-mode').on('click', 'a', function (e) {
                 e.preventDefault();
                 var shopProductWrap = $('.shop-product-wrap');
                 var viewMode = $(this).data('target');
@@ -280,18 +280,18 @@
 
 
         // model option start here
-        $(function() {
-            $('.view-modal').on('click', function() {
+        $(function () {
+            $('.view-modal').on('click', function () {
                 $('.modal').addClass('show');
             });
-            $('.close').on('click', function() {
+            $('.close').on('click', function () {
                 $('.modal').removeClass('show');
             });
         });
 
         //shop-widget drodown menu display
-        $(function() {
-            $('.shop-widget .shop-menu li a').on('click', function(e) {
+        $(function () {
+            $('.shop-widget .shop-menu li a').on('click', function (e) {
                 var element = $(this).parent('li');
                 if (element.hasClass('open')) {
                     element.removeClass('open');
@@ -309,11 +309,11 @@
         });
 
         // shop cart + - start here
-        $(function() {
+        $(function () {
             var CartPlusMinus = $('.cart-plus-minus');
             CartPlusMinus.prepend('<div class="dec qtybutton">-</div>');
             CartPlusMinus.append('<div class="inc qtybutton">+</div>');
-            $(".qtybutton").on("click", function() {
+            $(".qtybutton").on("click", function () {
                 var $button = $(this);
                 var oldValue = $button.parent().find("input").val();
                 if ($button.text() === "+") {
@@ -331,7 +331,7 @@
         });
 
         //Review Tabs
-        $('ul.review-nav').on('click', 'li', function(e) {
+        $('ul.review-nav').on('click', 'li', function (e) {
             e.preventDefault();
             var reviewContent = $('.review-content');
             var viewRev = $(this).data('target');
@@ -341,7 +341,7 @@
         });
 
         // sticky-widget
-        $(function() {
+        $(function () {
             $('.sticky-widget').theiaStickySidebar();
         });
 
@@ -351,7 +351,7 @@
             $(".wow").removeClass("wow");
         }
     });
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         $('.preloader').fadeOut(1000);
     })
 })(jQuery)
@@ -400,8 +400,10 @@ function pageGenerator(getem) {
             li.className = 'list';
             const a = document.createElement('a');
             a.href = '#';
-            a.innerHTML = "<span>" + i + "</span>";
-            a.setAttribute('data-page', i);
+            const span = document.createElement('span');
+            span.innerHTML = i;
+            span.setAttribute('data-page', i);
+            a.appendChild(span);
             li.appendChild(a);
             pageUl.insertBefore(li, pageUl.querySelector('.next'));
         }
@@ -421,13 +423,13 @@ function pageRunner(page, items, lastPage, active) {
 
             } else {
                 if (page_mover === "next") {
-                    console.log(page_mover)
                     index++;
                     if (index >= lastPage) {
                         index = lastPage;
                     }
                 } else {
                     index--;
+
                     if (index <= 1) {
                         index = 1;
                     }
@@ -454,9 +456,11 @@ function getpagElement(val) {
 
 
 function pageMaker(index, item_per_page, activePage) {
+
     const start = item_per_page * index;
     const end = start + item_per_page;
     const current_page = emptyBox.slice((start - item_per_page), (end - item_per_page));
+
     blog_box.innerHTML = "";
     for (let j = 0; j < current_page.length; j++) {
         let item = current_page[j];

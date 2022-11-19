@@ -173,23 +173,18 @@ h6>a {
     h1 {
         font-size: 100px;
     }
-
     h2 {
         font-size: 48px;
     }
-
     h3 {
         font-size: 36px;
     }
-
     h4 {
         font-size: 24px;
     }
-
     h5 {
         font-size: 18px;
     }
-
     h6 {
         font-size: 16px;
     }
@@ -973,6 +968,11 @@ input[type="submit"] {
     padding-bottom: 0;
 }
 
+.price-style .price-list ul li span {
+    /* color: #5146ae; */
+    font-weight: 600;
+}
+
 
 /*----- all pricing plan content css -----*/
 
@@ -1088,7 +1088,6 @@ input[type="submit"] {
         transform: scale(0, 0);
         opacity: 0.5;
     }
-
     100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
@@ -1101,7 +1100,6 @@ input[type="submit"] {
         -webkit-transform: scale(0, 0);
         opacity: 0.5;
     }
-
     100% {
         -webkit-transform: scale(1, 1);
         opacity: 0;
@@ -2063,7 +2061,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 575px) {
-
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-left,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-right,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-top {
@@ -2072,7 +2069,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 425px) {
-
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-left,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-right,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-top {
@@ -2088,7 +2084,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 425px) {
-
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-left img,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-right img,
     .banner-area .banner-position .section-wrapper .banner-thumb .thumb-top img {
@@ -2417,7 +2412,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 575px) {
-
     .app-banner.style-3 .baner-wrapper .banner-thumb .shape,
     .app-banner.style-3 .baner-wrapper .banner-thumb .shape1 {
         height: 150px;
@@ -2425,7 +2419,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 575px) {
-
     .app-banner.style-3 .baner-wrapper .banner-thumb .shape img,
     .app-banner.style-3 .baner-wrapper .banner-thumb .shape1 img {
         height: 100%;
@@ -2494,7 +2487,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 1199px) {
-
     .page-header::after,
     .page-header::before {
         display: none;
@@ -2645,7 +2637,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (min-width: 768px) {
-
     .page-header.style-8 .shap,
     .page-header.style-8 .shap-1,
     .page-header.style-8 .shap-2 {
@@ -2654,7 +2645,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (min-width: 992px) {
-
     .page-header.style-8 .shap,
     .page-header.style-8 .shap-1,
     .page-header.style-8 .shap-2 {
@@ -2935,7 +2925,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (min-width: 768px) {
-
     .service-area.style-3 .section-wrapper .col-lg-4.col-md-6.col-12:nth-child(4) .post-content,
     .service-area.style-3 .section-wrapper :nth-child(5) .post-content,
     .service-area.style-3 .section-wrapper :nth-child(6) .post-content {
@@ -2982,7 +2971,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (max-width: 991px) {
-
     .service-area.style-5 .col-lg-4.col-md-6.col-12:nth-child(1) .post-content,
     .service-area.style-5 :nth-child(2) .post-content {
         margin-bottom: 30px;
@@ -3744,7 +3732,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
         padding: 0 20px;
         border-left: 1px solid #eaeaff;
     }
-
     .service-two.style-1 ul.client-service li:first-child {
         padding-left: 0;
         border-left: none;
@@ -4172,7 +4159,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
     transition: all 0.3s ease-in;
 }
 
-
 .pricing-area .pricing-wrapper .col-xl-4.col-md-6.col-12 .price-item .price-thumb .price_t p {
     color: #5146ae;
 }
@@ -4185,8 +4171,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
     background: #5146ae;
     box-shadow: 0 5px 10px rgba(81, 70, 174, 0.7);
 }
-
-
 
 @media (max-width: 1199px) {
     .pricing-area .pricing-wrapper .col-xl-4.col-md-6.col-12:nth-child(3) .price-item {
@@ -4258,7 +4242,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
     position: static;
     transform: none;
 }
-
 
 .price-categorises {
     padding-bottom: 60px;
@@ -5415,7 +5398,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 }
 
 @media (min-width: 1200px) {
-
     .our-team.style-1 .section-wrapper .col-xl-3.col-lg-4.col-md-6.col-12:nth-child(5) .team-content,
     .our-team.style-1 .section-wrapper :nth-child(6) .team-content,
     .our-team.style-1 .section-wrapper :nth-child(7) .team-content,
@@ -6017,11 +5999,9 @@ footer .footer-position.style-5 .footer-news form button.button {
     0% {
         transform: translateY(-3px);
     }
-
     50% {
         transform: translateY(3px);
     }
-
     100% {
         transform: translateY(-3px);
     }
@@ -6483,7 +6463,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 576px) {
-
     .clients-area .section-wrapper .post-content .clients-container .client-button-next,
     .clients-area .section-wrapper .post-content .clients-container .client-button-prev {
         bottom: -30px;
@@ -6491,7 +6470,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 1200px) {
-
     .clients-area .section-wrapper .post-content .clients-container .client-button-next,
     .clients-area .section-wrapper .post-content .clients-container .client-button-prev {
         bottom: -50px;
@@ -7237,7 +7215,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 576px) {
-
     .contact-location .contact-form form.comment-form input[type="text"],
     .contact-location .contact-form form.comment-form [type="email"] {
         width: calc(100% / 2 - 10px);
@@ -7245,7 +7222,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 576px) {
-
     .contact-location .contact-form form.comment-form input[type="text"]:nth-child(3),
     .contact-location .contact-form form.comment-form [type="email"]:nth-child(3) {
         width: 100% !important;
@@ -8031,7 +8007,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 992px) {
-
     .blogs .blog-wrapper .widget-instagram ul.instagram-thumb li:nth-child(1),
     .blogs .blog-wrapper .widget-instagram ul.instagram-thumb li:nth-child(3) {
         margin-left: 0;
@@ -8131,7 +8106,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (max-width: 575px) {
-
     .blogs .blog-wrapper .anuther-page ul.page-linkup li:nth-child(4),
     .blogs .blog-wrapper .anuther-page ul.page-linkup li:nth-child(6) {
         display: none;
@@ -8541,7 +8515,6 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 @media (min-width: 992px) {
-
     .blogs.blog-single .blog-wrapper .comment-respond .add-comment form.comment-form input[type="text"],
     .blogs.blog-single .blog-wrapper .comment-respond .add-comment form.comment-form [type="email"],
     .blogs.blog-single .blog-wrapper .comment-respond .add-comment form.comment-form [type="url"] {
@@ -10241,7 +10214,6 @@ footer .footer-position.style-5 .footer-news form button.button {
         width: 100%;
         margin-bottom: 15px;
     }
-
     .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .cart-checkout input[type="submit"]:last-child {
         margin-bottom: 0;
     }
@@ -10608,7 +10580,6 @@ ul.countdown-list li small {
         -webkit-transform: translateX(-10px) scale(0.9);
         transform: translateX(-10px) scale(0.9);
     }
-
     100% {
         -webkit-transform: translateX(30px) scale(1.3) translateY(10px);
         transform: translateX(30px) scale(1.3) translateY(10px);
@@ -10620,7 +10591,6 @@ ul.countdown-list li small {
         -webkit-transform: translateX(-10px) scale(0.9);
         transform: translateX(-10px) scale(0.9);
     }
-
     100% {
         -webkit-transform: translateX(30px) scale(1.3) translateY(10px);
         transform: translateX(30px) scale(1.3) translateY(10px);
@@ -10632,7 +10602,6 @@ ul.countdown-list li small {
         -webkit-transform: scale(0.9);
         transform: scale(0.9);
     }
-
     100% {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
@@ -10644,7 +10613,6 @@ ul.countdown-list li small {
         -webkit-transform: scale(0.9);
         transform: scale(0.9);
     }
-
     100% {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
@@ -10656,7 +10624,6 @@ ul.countdown-list li small {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-
     100% {
         -webkit-transform: translateY(40px);
         transform: translateY(40px);
@@ -10668,7 +10635,6 @@ ul.countdown-list li small {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-
     100% {
         -webkit-transform: translateY(40px);
         transform: translateY(40px);
@@ -10680,17 +10646,14 @@ ul.countdown-list li small {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
-
     25% {
         -webkit-transform: translateY(10px);
         transform: translateY(10px);
     }
-
     50% {
         -webkit-transform: translateX(30px);
         transform: translateX(30px);
     }
-
     100% {
         -webkit-transform: translateX(50px);
         transform: translateX(50px);
@@ -10702,17 +10665,14 @@ ul.countdown-list li small {
         -webkit-transform: translateX(0);
         transform: translateX(0);
     }
-
     25% {
         -webkit-transform: translateY(10px);
         transform: translateY(10px);
     }
-
     50% {
         -webkit-transform: translateX(30px);
         transform: translateX(30px);
     }
-
     100% {
         -webkit-transform: translateX(50px);
         transform: translateX(50px);
@@ -10723,11 +10683,9 @@ ul.countdown-list li small {
     0% {
         transform: rotate(0deg);
     }
-
     50% {
         transform: rotate(180deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -10737,11 +10695,9 @@ ul.countdown-list li small {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
-
     50% {
         transform: translate(-50%, -50%) rotate(180deg);
     }
-
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -10753,7 +10709,6 @@ ul.countdown-list li small {
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate(-50%, -50%) scale(2);
@@ -10767,7 +10722,6 @@ ul.countdown-list li small {
         -webkit-transform: translate(-50%, -50%) scale(1);
         transform: translate(-50%, -50%) scale(1);
     }
-
     100% {
         opacity: 0;
         -webkit-transform: translate(-50%, -50%) scale(2);
@@ -10779,11 +10733,9 @@ ul.countdown-list li small {
     0% {
         transform: translateY(-3px);
     }
-
     50% {
         transform: translateY(3px);
     }
-
     100% {
         transform: translateY(-3px);
     }
@@ -10796,7 +10748,6 @@ ul.countdown-list li small {
         opacity: 1;
         border: 2px solid #fff;
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -10812,7 +10763,6 @@ ul.countdown-list li small {
         opacity: 1;
         border: 2px solid #000000b8;
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);

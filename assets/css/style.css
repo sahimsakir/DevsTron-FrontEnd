@@ -11014,12 +11014,12 @@ select.list-dt:focus {
 
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f007";
+    content: "\f02d";
 }
 
 #progressbar #payment:before {
     font-family: FontAwesome;
-    content: "\f09d";
+    content: "\f19d";
 }
 
 #progressbar #confirm:before {
@@ -11053,10 +11053,16 @@ select.list-dt:focus {
     z-index: -1;
 }
 
+
 /*Color number of the step and the connector before it*/
 #progressbar li.active:before,
 #progressbar li.active:after {
     background: #5146ae;
+}
+
+#progressbar #confirm.active:before,
+#progressbar #confirm.active:after {
+    background: green;
 }
 
 /*Imaged Radio Buttons*/
@@ -11089,6 +11095,64 @@ select.list-dt:focus {
 .fit-image {
     width: 100%;
     object-fit: cover;
+}
+
+.upload-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drag-area {
+    border: 2px dashed #000;
+    height: 350px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #000;
+}
+
+.drag-area .icon {
+    font-size: 80px;
+    color: #000;
+}
+
+.drag-area header {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+}
+
+.drag-area span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 /*====================================================*/

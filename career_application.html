@@ -82,8 +82,26 @@
 								<fieldset>
 									<div class="form-card">
 										<h2 class="fs-title">Educational Information</h2>
-										<input type="text" name="fname" placeholder="First Name" />
-										<input type="text" name="lname" placeholder="Last Name" />
+										<div class="row">
+											<div class="col-md-12 mt-4 mb-4">
+												<select class="form-select" aria-label="Default select example">
+													<option selected>Select your Degree</option>
+													<option value="1">BSc</option>
+													<option value="2">MSc</option>
+												</select>
+											</div>
+											<div class="col-md-8">
+												<input type="text" name="uni_name"
+													placeholder="Enter University Name" />
+											</div>
+											<div class="col-md-4">
+												<input type="text" name="graduation_year"
+													placeholder="Enter Graduation Year" />
+											</div>
+										</div>
+
+
+
 										<input type="text" name="phno" placeholder="Contact No." />
 										<input type="text" name="phno_2" placeholder="Alternate Contact No." />
 									</div>

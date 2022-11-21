@@ -9,7 +9,7 @@
 	<!---google fonts hear-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 	<!--font awesome css-->
 	<script defer src="https://kit.fontawesome.com/c1a85835c5.js"></script>
 	<!--animate css hear-->
@@ -52,7 +52,7 @@
 					<p>Fill all form field to go the next step</p>
 					<div class="row">
 						<div class="col-md-12 mx-0">
-							<form id="msform">
+							<form id="msform" action="#">
 								<!-- progressbar -->
 								<ul id="progressbar">
 									<li class="active" id="account"><strong>Personal</strong></li>
@@ -64,6 +64,7 @@
 								<fieldset>
 									<div class="form-card">
 										<h2 class="fs-title">Personal Information</h2>
+										<p>Passport Size Picture</p>
 										<div class="upload-image mt-3 mb-4">
 											<div class="drag-area">
 												<div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -73,37 +74,76 @@
 												<input type="file" hidden>
 											</div>
 										</div>
-										<input type="text" name="uname" placeholder="Enter Your Full Name" />
+										<label for="full_name">Full Name</label>
+										<input type="text" name="full_name" placeholder="Enter Your Full Name" />
+										<label for="email">Email Address</label>
 										<input type="email" name="email" placeholder="Enter Your Email" />
-										<input type="text" name="phone" placeholder="Enter Your Number" />
+										<label for="phone">Cell Number</label>
+										<input type="text" name="phone" placeholder="Enter Your Cell Number" />
+										<div class="file-upload d-flex justify-content-center">
+											<div class="wrapper">
+												<input class="file-input" type="file" name="file" hidden>
+												<i class="fas fa-cloud-upload-alt"></i>
+												<p>Browse File to Upload Your Resume</p>
+
+												<section class="progress-area"></section>
+												<section class="uploaded-area"></section>
+											</div>
+										</div>
 									</div>
 									<a href="#" name="next" class="next action-button">Next Step</a>
 								</fieldset>
 								<fieldset>
 									<div class="form-card">
 										<h2 class="fs-title">Educational Information</h2>
-										<div class="row">
-											<div class="col-md-12 mt-4 mb-4">
-												<select class="form-select" aria-label="Default select example">
-													<option selected>Select your Degree</option>
-													<option value="1">BSc</option>
-													<option value="2">MSc</option>
-												</select>
+										<div id="repeater">
+											<!-- Repeater Heading -->
+											<div class="repeater-heading d-flex justify-content-end">
+												<a href="#"
+													class="btn btn-outline-info repeater-add-btn rounded-circle">
+													<i class="fa-solid fa-plus"></i>
+												</a>
 											</div>
-											<div class="col-md-8">
-												<input type="text" name="uni_name"
-													placeholder="Enter University Name" />
-											</div>
-											<div class="col-md-4">
-												<input type="text" name="graduation_year"
-													placeholder="Enter Graduation Year" />
+											<div class="clearfix"></div>
+											<!-- Repeater Items -->
+											<div class="items" data-group="test">
+												<!-- Repeater Content -->
+												<div class="item-content">
+													<div class="row">
+														<div class="col-md-12 mt-4 mb-4">
+															<label for="instituion_name">Inistitution Name</label>
+															<input type="text" name="instituion_name[]"
+																placeholder="Enter Institution Name"
+																data-name="instituion_name" />
+
+														</div>
+														<div class="col-md-6">
+															<label for="degree">Degree</label>
+															<select class="form-select" name="degree[]"
+																data-name="degree" aria-label=" Default select example">
+																<option selected>Select your Degree</option>
+																<option value="1">BSc</option>
+																<option value="2">MSc</option>
+															</select>
+														</div>
+														<div class="col-md-6">
+															<label for="passing_year">Passing Year</label>
+															<input type="text" name="passing_year[]"
+																placeholder="Enter Passing Year"
+																data-name="passing_year" />
+														</div>
+													</div>
+												</div>
+												<!-- Repeater Remove Btn -->
+												<div class="repeater-remove-btn d-flex justify-content-end">
+													<a href="#"
+														class="btn btn-outline-danger remove-btn rounded-circle">
+														<i class="fa-solid fa-minus"></i>
+													</a>
+												</div>
+												<div class="clearfix"></div>
 											</div>
 										</div>
-
-
-
-										<input type="text" name="phno" placeholder="Contact No." />
-										<input type="text" name="phno_2" placeholder="Alternate Contact No." />
 									</div>
 									<a href="#" name="previous" class="previous action-button-previous">Previous</a>
 									<a href="#" name="next" class="next action-button">Next Step</a>
@@ -111,10 +151,70 @@
 								<fieldset>
 									<div class="form-card">
 										<h2 class="fs-title">Career Information</h2>
-										<input type="text" name="fname" placeholder="First Name" />
-										<input type="text" name="lname" placeholder="Last Name" />
-										<input type="text" name="phno" placeholder="Contact No." />
-										<input type="text" name="phno_2" placeholder="Alternate Contact No." />
+										<div id="repeater-2">
+											<!-- Repeater Heading -->
+											<div class="repeater-heading d-flex justify-content-end">
+												<a href="#"
+													class="btn btn-outline-info repeater-add-btn rounded-circle">
+													<i class="fa-solid fa-plus"></i>
+												</a>
+											</div>
+											<div class="clearfix"></div>
+											<!-- Repeater Items -->
+											<div class="items" data-group="test">
+												<!-- Repeater Content -->
+												<div class="item-content">
+													<div class="row">
+														<div class="col-md-12">
+															<label for="company_name">Company Name</label>
+															<input type="text" id="company_name" name="company_name[]"
+																placeholder="Enter Company Name"
+																data-name="company_name" />
+														</div>
+														<div class="col-md-4">
+															<label for="start_date">Joining Date</label>
+															<input type="date" placeholder="dd/mm/yy"
+																name="start_date[]" class="form-control"
+																data-name="start_date" required />
+														</div>
+														<div class="col-md-4 d-flex align-items-center">
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox"
+																	value="check" id="checkbox" name="checkbox[]"
+																	onclick="checkCurrent(this.id)" data-name="checkbox"
+																	checked>
+																<label class="form-check-label" for="flexCheckDefault">
+																	Currently Working
+																</label>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<label for="end_date" class="end_date">Leaving Date</label>
+															<input type="date" placeholder="dd/mm/yy" id="end_date"
+																name="end_date[]" data-name="end_date" class="end_date"
+																class="form-control" required />
+
+														</div>
+														<div class="col-md-12 mt-4 mb-4">
+															<div class="form-group">
+																<label for="work_summary">Work
+																	Summary</label>
+																<textarea class="form-control" name="work_summary[]"
+																	id="work_summary" rows="6"></textarea>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Repeater Remove Btn -->
+												<div class="repeater-remove-btn d-flex justify-content-end">
+													<a href="#"
+														class="btn btn-outline-danger remove-btn rounded-circle">
+														<i class="fa-solid fa-minus"></i>
+													</a>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+										</div>
 									</div>
 									<a href="#" name="previous" class="previous action-button-previous">Previous</a>
 									<a href="#" name="make_payment" class="next action-button">Confirm</a>
@@ -158,7 +258,7 @@
 
 
 	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 	<script src="assets/js/fontawesome.min.js"></script>
 	<script src="assets/js/jquery.waypoints.min.js"></script>
 	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
@@ -170,7 +270,40 @@
 	<script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/image-upload.js"></script>
+	<script src="assets/js/repeater.js"></script>
+	<script src="assets/js/file-upload-progress.js"></script>
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+	<script>
+		/* Create Repeater */
+		$("#repeater").createRepeater({
+			showFirstItemToDefault: true,
+		});
+		$("#repeater-2").createRepeater({
+			showFirstItemToDefault: true,
+		});
+
+		function checkCurrent(id) {
+			var checkBox = "#" + id;
+			var testArray = id.substring(0, id.length - 8);
+			var labelEndDate = testArray + "end_date";
+			var lastDate = "#" + testArray + "end_date";
+			var check_current = document.querySelector(checkBox);
+			var end_date = document.querySelector(lastDate);
+			var end_date_label = document.querySelector('[for=' + labelEndDate + ']')
+
+			if (check_current.checked == true) {
+				end_date_label.style.opacity = "0";
+				end_date.style.opacity = "0";
+				console.log(check_current.checked);
+			} else {
+				end_date_label.style.opacity = "1";
+				end_date.style.opacity = "1";
+				console.log(check_current.checked);
+			}
+		}
+
+	</script>
 </body>
 
 </html>

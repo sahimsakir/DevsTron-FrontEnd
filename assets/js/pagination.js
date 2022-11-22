@@ -41,7 +41,7 @@ function pageGenerator(getem) {
             const li = document.createElement('li');
             li.className = 'list';
             const a = document.createElement('a');
-            a.href = '#';
+            a.href = '#blog';
             const span = document.createElement('span');
             span.innerHTML = i;
             span.setAttribute('data-page', i);

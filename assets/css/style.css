@@ -4125,10 +4125,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
 .portfolio-slide-area .portfolio-wrapper .portfolio-container .swiper-pagination {
     z-index: 1;
     bottom: -5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .portfolio-slide-area .portfolio-wrapper .portfolio-container .swiper-pagination-bullet-active {
@@ -4141,8 +4137,6 @@ header .bg-white.about-header .header-item .header-menu .primary-menu .main-menu
     height: 12px;
     background: #fff;
     border: 1px solid #5146ae;
-    padding: 8px;
-    margin: 2px;
     opacity: 1;
 }
 
@@ -7158,7 +7152,9 @@ footer .footer-position.style-5 .footer-news form button.button {
 }
 
 .contact-link .section-wrapper .contact-item {
+    align-items: center;
     width: 100%;
+    border-radius: 25px;
     padding: 30px 25px;
     box-shadow: 0 5px 5px rgba(136, 136, 136, 0.3);
 }

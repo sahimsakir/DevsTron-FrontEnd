@@ -38,7 +38,7 @@
 	</div>
 	<!-- preloader ending here -->
 	<div class="header-application d-flex flex-column justify-content-center align-items-center mt-5">
-		<img class="m-2" src="assets/images/logo/logo-black.png" width="300px" alt="">
+		<a href="index.html"><img class="m-2" src="assets/images/logo/logo-black.png" width="300px" alt=""></a>
 		<a class="m-2" href="career_single.html">Back to the Job Description</a>
 		<h3 class="m-2">Apply Now</h3>
 	</div>
@@ -276,10 +276,10 @@
 	<script src="assets/js/theia-sticky-sidebar.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script src="assets/js/app.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="assets/js/image-upload.js"></script>
 	<script src="assets/js/repeater.js"></script>
 	<script src="assets/js/file-upload-progress.js"></script>
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 	<script>
 		/* Create Repeater */
@@ -290,23 +290,6 @@
 			showFirstItemToDefault: true,
 		});
 
-		function checkCurrent(id) {
-			var checkBox = "#" + id;
-			var testArray = id.substring(0, id.length - 8);
-			var labelEndDate = testArray + "end_date";
-			var lastDate = "#" + testArray + "end_date";
-			var check_current = document.querySelector(checkBox);
-			var end_date = document.querySelector(lastDate);
-			var end_date_label = document.querySelector('[for=' + labelEndDate + ']')
-
-			if (check_current.checked == true) {
-				end_date_label.style.opacity = "0";
-				end_date.style.opacity = "0";
-			} else {
-				end_date_label.style.opacity = "1";
-				end_date.style.opacity = "1";
-			}
-		}
 	</script>
 </body>
 

@@ -424,3 +424,21 @@ $(document).ready(function () {
     })
 
 });
+
+function checkCurrent(id) {
+    var checkBox = "#" + id;
+    var testArray = id.substring(0, id.length - 8);
+    var labelEndDate = testArray + "end_date";
+    var lastDate = "#" + testArray + "end_date";
+    var check_current = document.querySelector(checkBox);
+    var end_date = document.querySelector(lastDate);
+    var end_date_label = document.querySelector('[for=' + labelEndDate + ']')
+
+    if (check_current.checked == true) {
+        end_date_label.style.opacity = "0";
+        end_date.style.opacity = "0";
+    } else {
+        end_date_label.style.opacity = "1";
+        end_date.style.opacity = "1";
+    }
+}

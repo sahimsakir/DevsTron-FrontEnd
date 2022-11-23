@@ -3,7 +3,12 @@ const wrapper = document.querySelector(".wrapper");
 const fileInput = document.querySelector(".file-input");
 const progressArea = document.querySelector(".progress-area");
 const uploadedArea = document.querySelector(".uploaded-area");
+var ifRunning = false;
 wrapper.addEventListener("click", () => {
+  if (ifRunning) {
+    alert('Please wait another file is uploading..')
+    return
+  }
   fileInput.click();
 });
 fileInput.onchange = ({ target }) => {
@@ -20,7 +25,9 @@ fileInput.onchange = ({ target }) => {
 function uploadFile(name) {
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "php/upload.php", true);
+  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
   xhr.upload.addEventListener("progress", ({ loaded, total }) => {
+    console.log(xhr.responseText);
     let fileLoaded = Math.floor((loaded / total) * 100);
     let fileTotal = Math.floor(total / 1000);
     let fileSize;
@@ -53,8 +60,10 @@ function uploadFile(name) {
                           </li>`;
       uploadedArea.classList.remove("onprogress");
       uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+      ifRunning = false;
     }
   });
   let data = new FormData(form);
   xhr.send(data);
+  ifRunning = true;
 }

@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightcase/2.5.0/css/lightcase.min.css" />
 	<!--swiper css-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+	<!-- Filepond css -->
+	<!-- <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" /> -->
 	<!-- shortcut image png is loaded -->
 	<link rel="shortcut icon" href="assets/images/logo/favicon.png">
 	<!-- style CSS is loaded -->
@@ -86,6 +88,7 @@
 										<input type="email" name="email" placeholder="Enter Your Email" />
 										<label for="phone">Cell Number</label>
 										<input type="text" name="phone" placeholder="Enter Your Cell Number" />
+										<!-- <input type="file" id="test"> -->
 										<div class="file-upload d-flex justify-content-center">
 											<div class="wrapper">
 												<input class="file-input" type="file" name="file" hidden>
@@ -116,12 +119,16 @@
 												<!-- Repeater Content -->
 												<div class="item-content">
 													<div class="row">
-														<div class="col-md-12 mt-4 mb-4">
+														<div class="col-md-8 mt-4 mb-4">
 															<label for="instituion_name">Inistitution Name</label>
 															<input type="text" name="instituion_name[]"
 																placeholder="Enter Institution Name"
 																data-name="instituion_name" />
-
+														</div>
+														<div class="col-md-4 mt-4 mb-4">
+															<label for="grade">Grade</label>
+															<input type="text" name="grade[]" placeholder="Enter Grade"
+																data-name="grade" />
 														</div>
 														<div class="col-md-6">
 															<label for="degree">Degree</label>
@@ -171,17 +178,23 @@
 												<!-- Repeater Content -->
 												<div class="item-content">
 													<div class="row">
-														<div class="col-md-12">
+														<div class="col-md-6">
 															<label for="company_name">Company Name</label>
 															<input type="text" id="company_name" name="company_name[]"
 																placeholder="Enter Company Name"
 																data-name="company_name" />
 														</div>
+														<div class="col-md-6">
+															<label for="designation">Designation</label>
+															<input type="text" id="designation" name="designation[]"
+																placeholder="Enter Designation"
+																data-name="designation" />
+														</div>
 														<div class="col-md-4">
 															<label for="start_date">Joining Date</label>
 															<input type="date" placeholder="dd/mm/yy"
 																name="start_date[]" class="form-control"
-																data-name="start_date" required />
+																data-name="start_date" />
 														</div>
 														<div class="col-md-4 d-flex align-items-center">
 															<div class="form-check">
@@ -198,7 +211,7 @@
 															<label for="end_date" class="end_date">Leaving Date</label>
 															<input type="date" placeholder="dd/mm/yy" id="end_date"
 																name="end_date[]" data-name="end_date" class="end_date"
-																class="form-control" required />
+																class="form-control" />
 
 														</div>
 														<div class="col-md-12 mt-4 mb-4">
@@ -224,7 +237,7 @@
 									</div>
 									<a href="#" name="previous" class="previous action-button-previous">Previous</a>
 									<button type="submit" name="make_payment"
-										class="next action-button">Confirm</button>
+										class="submit next action-button">Confirm</button>
 								</fieldset>
 								<fieldset>
 									<div class="form-card">
@@ -265,6 +278,7 @@
 
 
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<!-- <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
@@ -281,6 +295,7 @@
 	<script src="assets/js/repeater.js"></script>
 	<script src="assets/js/file-upload-progress.js"></script>
 
+
 	<script>
 		/* Create Repeater */
 		$("#repeater").createRepeater({
@@ -289,6 +304,21 @@
 		$("#repeater-2").createRepeater({
 			showFirstItemToDefault: true,
 		});
+		// Get a reference to the file input element
+		// const inputElement = document.querySelector('input[id="test"]');
+
+		// // Create a FilePond instance
+		// const pond = FilePond.create(inputElement);
+
+		// FilePond.setOptions({
+		// 	server: {
+		// 		process: 'php/upload.php',
+		// 		revert: '/cancel',
+		// 		// headers: {
+		// 		// 	'X-CSRF'
+		// 		// }
+		// 	}
+		// });
 
 	</script>
 </body>
